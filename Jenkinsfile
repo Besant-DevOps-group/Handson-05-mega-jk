@@ -1,11 +1,11 @@
 pipeline {
-    agent any 
+    agent any
+
     stages {
-        stage('print'){
-            steps{
+        stage('print name') {
+            steps {
                 sh "python ./main_test.py"
             }
-
         }
     }
 }
