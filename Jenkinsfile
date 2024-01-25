@@ -1,15 +1,11 @@
-pipeline{
-    agent any
-    stages{
-        stage('print name'){
+pipeline {
+    agent any 
+    stages {
+        stage('print'){
             steps{
-                echo"mega"
+                sh "python ./main_test.py"
             }
-        }
-        stage('test'){
-            steps{
-                sh "python3 ./main_test.py"
-            }
+
         }
     }
 }
